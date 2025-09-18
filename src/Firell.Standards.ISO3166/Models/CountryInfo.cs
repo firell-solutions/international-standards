@@ -7,7 +7,7 @@ namespace Firell.Standards;
 /// <summary>
 /// Represents a country with its associated names and ISO 3166-1 codes.
 /// </summary>
-public record CountryInfo
+public partial record CountryInfo
 {
     /// <summary>
     /// Gets the common name of the country.
@@ -50,6 +50,11 @@ public record CountryInfo
     public required string Region { get; init; }
 
     /// <summary>
+    /// Gets the subregion of the region where the country is located.
+    /// </summary>
+    public required string Subregion { get; init; }
+
+    /// <summary>
     /// Gets the capital city of the country.
     /// </summary>
     public required string Capital { get; init; }
@@ -84,6 +89,7 @@ public record CountryInfo
         builder.AppendLine($"Three Letter Code: {ThreeLetterCode}");
 
         builder.AppendLine($"Region: {Region}");
+        builder.AppendLine($"Subregion: {Subregion}");
         builder.AppendLine($"Capital: {Capital}");
 
         foreach (KeyValuePair<string, string> language in Languages)
