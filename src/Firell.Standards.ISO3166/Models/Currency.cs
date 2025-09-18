@@ -5,14 +5,14 @@ namespace Firell.Standards;
 /// <summary>
 /// Represents a currency with a name and symbol.
 /// </summary>
-public record CurrencyDescriptor
+public record Currency
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="CurrencyDescriptor"/> class with the specified name and symbol.
+    /// Initializes a new instance of the <see cref="Currency"/> class with the specified name and symbol.
     /// </summary>
     /// <param name="name">The name of the currency.</param>
     /// <param name="symbol">The symbol of the currency.</param>
-    public CurrencyDescriptor(string name, string symbol)
+    public Currency(string name, string symbol)
     {
         Name = name;
         Symbol = symbol;

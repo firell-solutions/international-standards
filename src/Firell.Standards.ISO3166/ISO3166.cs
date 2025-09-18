@@ -21,11 +21,11 @@ namespace Firell.Standards;
 public static partial class ISO3166
 {
     /// <summary>
-    /// Gets a read-only collection of all countries defined in the ISO 3166-1 standard, each represented by a <see cref="Country"/> object.
+    /// Gets a read-only collection of all countries defined in the ISO 3166-1 standard, each represented by a <see cref="CountryInfo"/> object.
     /// </summary>
-    public static IReadOnlyCollection<Country> Countries { get; } = new ReadOnlyCollection<Country>
+    public static IReadOnlyCollection<CountryInfo> Countries { get; } = new ReadOnlyCollection<CountryInfo>
     ([
-        new Country
+        new CountryInfo
         {
             CommonName = "Aruba",
             CommonNativeName = "Aruba",
@@ -41,13 +41,13 @@ public static partial class ISO3166
                 ["NLD"] = "Dutch",
                 ["PAP"] = "Papiamento",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AWG"] = new CurrencyDescriptor("Aruban florin", "ƒ"),
+                ["AWG"] = new Currency("Aruban florin", "ƒ"),
             },
             DialingCode = "+297",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Afghanistan",
             CommonNativeName = "افغانستان",
@@ -64,13 +64,13 @@ public static partial class ISO3166
                 ["PUS"] = "Pashto",
                 ["TUK"] = "Turkmen",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AFN"] = new CurrencyDescriptor("Afghan afghani", "؋"),
+                ["AFN"] = new Currency("Afghan afghani", "؋"),
             },
             DialingCode = "+93",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Angola",
             CommonNativeName = "Angola",
@@ -85,13 +85,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AOA"] = new CurrencyDescriptor("Angolan kwanza", "Kz"),
+                ["AOA"] = new Currency("Angolan kwanza", "Kz"),
             },
             DialingCode = "+244",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Anguilla",
             CommonNativeName = "Anguilla",
@@ -106,13 +106,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1264",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Åland Islands",
             CommonNativeName = "Åland",
@@ -127,13 +127,13 @@ public static partial class ISO3166
             {
                 ["SWE"] = "Swedish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+35818",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Albania",
             CommonNativeName = "Shqipëria",
@@ -148,13 +148,13 @@ public static partial class ISO3166
             {
                 ["SQI"] = "Albanian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ALL"] = new CurrencyDescriptor("Albanian lek", "L"),
+                ["ALL"] = new Currency("Albanian lek", "L"),
             },
             DialingCode = "+355",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Andorra",
             CommonNativeName = "Andorra",
@@ -169,13 +169,13 @@ public static partial class ISO3166
             {
                 ["CAT"] = "Catalan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+376",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "United Arab Emirates",
             CommonNativeName = "دولة الإمارات العربية المتحدة",
@@ -190,13 +190,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AED"] = new CurrencyDescriptor("United Arab Emirates dirham", "د.إ"),
+                ["AED"] = new Currency("United Arab Emirates dirham", "د.إ"),
             },
             DialingCode = "+971",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Argentina",
             CommonNativeName = "Argentina",
@@ -212,13 +212,13 @@ public static partial class ISO3166
                 ["GRN"] = "Guaraní",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ARS"] = new CurrencyDescriptor("Argentine peso", "$"),
+                ["ARS"] = new Currency("Argentine peso", "$"),
             },
             DialingCode = "+54",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Armenia",
             CommonNativeName = "Հայաստան",
@@ -233,13 +233,13 @@ public static partial class ISO3166
             {
                 ["HYE"] = "Armenian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AMD"] = new CurrencyDescriptor("Armenian dram", "֏"),
+                ["AMD"] = new Currency("Armenian dram", "֏"),
             },
             DialingCode = "+374",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "American Samoa",
             CommonNativeName = "American Samoa",
@@ -255,13 +255,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SMO"] = "Samoan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1684",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Antarctica",
             CommonNativeName = "",
@@ -275,12 +275,12 @@ public static partial class ISO3166
             Languages = new Dictionary<string, string>
             {
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
             },
             DialingCode = "",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "French Southern and Antarctic Lands",
             CommonNativeName = "Terres australes et antarctiques françaises",
@@ -295,13 +295,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+262",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Antigua and Barbuda",
             CommonNativeName = "Antigua and Barbuda",
@@ -316,13 +316,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1268",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Australia",
             CommonNativeName = "Australia",
@@ -337,13 +337,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
             },
             DialingCode = "+61",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Austria",
             CommonNativeName = "Österreich",
@@ -358,13 +358,13 @@ public static partial class ISO3166
             {
                 ["DEU"] = "German",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+43",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Azerbaijan",
             CommonNativeName = "Azərbaycan",
@@ -379,13 +379,13 @@ public static partial class ISO3166
             {
                 ["AZE"] = "Azerbaijani",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AZN"] = new CurrencyDescriptor("Azerbaijani manat", "₼"),
+                ["AZN"] = new Currency("Azerbaijani manat", "₼"),
             },
             DialingCode = "+994",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Burundi",
             CommonNativeName = "Burundi",
@@ -401,13 +401,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["RUN"] = "Kirundi",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BIF"] = new CurrencyDescriptor("Burundian franc", "Fr"),
+                ["BIF"] = new Currency("Burundian franc", "Fr"),
             },
             DialingCode = "+257",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Belgium",
             CommonNativeName = "Belgien",
@@ -424,13 +424,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["NLD"] = "Dutch",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+32",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Benin",
             CommonNativeName = "Bénin",
@@ -445,13 +445,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+229",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Burkina Faso",
             CommonNativeName = "Burkina Faso",
@@ -466,13 +466,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+226",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bangladesh",
             CommonNativeName = "বাংলাদেশ",
@@ -487,13 +487,13 @@ public static partial class ISO3166
             {
                 ["BEN"] = "Bengali",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BDT"] = new CurrencyDescriptor("Bangladeshi taka", "৳"),
+                ["BDT"] = new Currency("Bangladeshi taka", "৳"),
             },
             DialingCode = "+880",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bulgaria",
             CommonNativeName = "България",
@@ -508,13 +508,13 @@ public static partial class ISO3166
             {
                 ["BUL"] = "Bulgarian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BGN"] = new CurrencyDescriptor("Bulgarian lev", "лв"),
+                ["BGN"] = new Currency("Bulgarian lev", "лв"),
             },
             DialingCode = "+359",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bahrain",
             CommonNativeName = "‏البحرين",
@@ -529,13 +529,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BHD"] = new CurrencyDescriptor("Bahraini dinar", ".د.ب"),
+                ["BHD"] = new Currency("Bahraini dinar", ".د.ب"),
             },
             DialingCode = "+973",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bahamas",
             CommonNativeName = "Bahamas",
@@ -550,14 +550,14 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BSD"] = new CurrencyDescriptor("Bahamian dollar", "$"),
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["BSD"] = new Currency("Bahamian dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1242",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bosnia and Herzegovina",
             CommonNativeName = "Bosna i Hercegovina",
@@ -574,13 +574,13 @@ public static partial class ISO3166
                 ["HRV"] = "Croatian",
                 ["SRP"] = "Serbian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BAM"] = new CurrencyDescriptor("Bosnia and Herzegovina convertible mark", "KM"),
+                ["BAM"] = new Currency("Bosnia and Herzegovina convertible mark", "KM"),
             },
             DialingCode = "+387",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Barthélemy",
             CommonNativeName = "Saint-Barthélemy",
@@ -595,13 +595,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+590",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Helena, Ascension and Tristan da Cunha",
             CommonNativeName = "Saint Helena, Ascension and Tristan da Cunha",
@@ -616,14 +616,14 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("Pound sterling", "£"),
-                ["SHP"] = new CurrencyDescriptor("Saint Helena pound", "£"),
+                ["GBP"] = new Currency("Pound sterling", "£"),
+                ["SHP"] = new Currency("Saint Helena pound", "£"),
             },
             DialingCode = "+2",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Belarus",
             CommonNativeName = "Белару́сь",
@@ -639,13 +639,13 @@ public static partial class ISO3166
                 ["BEL"] = "Belarusian",
                 ["RUS"] = "Russian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BYN"] = new CurrencyDescriptor("Belarusian ruble", "Br"),
+                ["BYN"] = new Currency("Belarusian ruble", "Br"),
             },
             DialingCode = "+375",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Belize",
             CommonNativeName = "Belize",
@@ -662,13 +662,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BZD"] = new CurrencyDescriptor("Belize dollar", "$"),
+                ["BZD"] = new Currency("Belize dollar", "$"),
             },
             DialingCode = "+501",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bermuda",
             CommonNativeName = "Bermuda",
@@ -683,13 +683,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BMD"] = new CurrencyDescriptor("Bermudian dollar", "$"),
+                ["BMD"] = new Currency("Bermudian dollar", "$"),
             },
             DialingCode = "+1441",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bolivia",
             CommonNativeName = "Wuliwya",
@@ -707,13 +707,13 @@ public static partial class ISO3166
                 ["QUE"] = "Quechua",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BOB"] = new CurrencyDescriptor("Bolivian boliviano", "Bs."),
+                ["BOB"] = new Currency("Bolivian boliviano", "Bs."),
             },
             DialingCode = "+591",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Caribbean Netherlands",
             CommonNativeName = "Caribisch Nederland",
@@ -730,13 +730,13 @@ public static partial class ISO3166
                 ["NLD"] = "Dutch",
                 ["PAP"] = "Papiamento",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+599",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Brazil",
             CommonNativeName = "Brasil",
@@ -751,13 +751,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BRL"] = new CurrencyDescriptor("Brazilian real", "R$"),
+                ["BRL"] = new Currency("Brazilian real", "R$"),
             },
             DialingCode = "+55",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Barbados",
             CommonNativeName = "Barbados",
@@ -772,13 +772,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BBD"] = new CurrencyDescriptor("Barbadian dollar", "$"),
+                ["BBD"] = new Currency("Barbadian dollar", "$"),
             },
             DialingCode = "+1246",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Brunei",
             CommonNativeName = "Negara Brunei Darussalam",
@@ -793,14 +793,14 @@ public static partial class ISO3166
             {
                 ["MSA"] = "Malay",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BND"] = new CurrencyDescriptor("Brunei dollar", "$"),
-                ["SGD"] = new CurrencyDescriptor("Singapore dollar", "$"),
+                ["BND"] = new Currency("Brunei dollar", "$"),
+                ["SGD"] = new Currency("Singapore dollar", "$"),
             },
             DialingCode = "+673",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bhutan",
             CommonNativeName = "འབྲུག་ཡུལ་",
@@ -815,14 +815,14 @@ public static partial class ISO3166
             {
                 ["DZO"] = "Dzongkha",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BTN"] = new CurrencyDescriptor("Bhutanese ngultrum", "Nu."),
-                ["INR"] = new CurrencyDescriptor("Indian rupee", "₹"),
+                ["BTN"] = new Currency("Bhutanese ngultrum", "Nu."),
+                ["INR"] = new Currency("Indian rupee", "₹"),
             },
             DialingCode = "+975",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Bouvet Island",
             CommonNativeName = "Bouvetøya",
@@ -837,12 +837,12 @@ public static partial class ISO3166
             {
                 ["NOR"] = "Norwegian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
             },
             DialingCode = "+47",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Botswana",
             CommonNativeName = "Botswana",
@@ -858,13 +858,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["TSN"] = "Tswana",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["BWP"] = new CurrencyDescriptor("Botswana pula", "P"),
+                ["BWP"] = new Currency("Botswana pula", "P"),
             },
             DialingCode = "+267",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Central African Republic",
             CommonNativeName = "République centrafricaine",
@@ -880,13 +880,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["SAG"] = "Sango",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+236",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Canada",
             CommonNativeName = "Canada",
@@ -902,13 +902,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CAD"] = new CurrencyDescriptor("Canadian dollar", "$"),
+                ["CAD"] = new Currency("Canadian dollar", "$"),
             },
             DialingCode = "+1",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cocos (Keeling) Islands",
             CommonNativeName = "Cocos (Keeling) Islands",
@@ -923,13 +923,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
             },
             DialingCode = "+61",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Switzerland",
             CommonNativeName = "Suisse",
@@ -947,13 +947,13 @@ public static partial class ISO3166
                 ["ITA"] = "Italian",
                 ["ROH"] = "Romansh",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CHF"] = new CurrencyDescriptor("Swiss franc", "Fr."),
+                ["CHF"] = new Currency("Swiss franc", "Fr."),
             },
             DialingCode = "+41",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Chile",
             CommonNativeName = "Chile",
@@ -968,13 +968,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CLP"] = new CurrencyDescriptor("Chilean peso", "$"),
+                ["CLP"] = new Currency("Chilean peso", "$"),
             },
             DialingCode = "+56",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "China",
             CommonNativeName = "中国",
@@ -989,13 +989,13 @@ public static partial class ISO3166
             {
                 ["ZHO"] = "Chinese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CNY"] = new CurrencyDescriptor("Chinese yuan", "¥"),
+                ["CNY"] = new Currency("Chinese yuan", "¥"),
             },
             DialingCode = "+86",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ivory Coast",
             CommonNativeName = "Côte d'Ivoire",
@@ -1010,13 +1010,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+225",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cameroon",
             CommonNativeName = "Cameroon",
@@ -1032,13 +1032,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+237",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "DR Congo",
             CommonNativeName = "RD Congo",
@@ -1057,13 +1057,13 @@ public static partial class ISO3166
                 ["LUA"] = "Tshiluba",
                 ["SWA"] = "Swahili",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CDF"] = new CurrencyDescriptor("Congolese franc", "FC"),
+                ["CDF"] = new Currency("Congolese franc", "FC"),
             },
             DialingCode = "+243",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Republic of the Congo",
             CommonNativeName = "République du Congo",
@@ -1080,13 +1080,13 @@ public static partial class ISO3166
                 ["KON"] = "Kikongo",
                 ["LIN"] = "Lingala",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+242",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cook Islands",
             CommonNativeName = "Cook Islands",
@@ -1102,14 +1102,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["RAR"] = "Cook Islands Māori",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CKD"] = new CurrencyDescriptor("Cook Islands dollar", "$"),
-                ["NZD"] = new CurrencyDescriptor("New Zealand dollar", "$"),
+                ["CKD"] = new Currency("Cook Islands dollar", "$"),
+                ["NZD"] = new Currency("New Zealand dollar", "$"),
             },
             DialingCode = "+682",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Colombia",
             CommonNativeName = "Colombia",
@@ -1124,13 +1124,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["COP"] = new CurrencyDescriptor("Colombian peso", "$"),
+                ["COP"] = new Currency("Colombian peso", "$"),
             },
             DialingCode = "+57",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Comoros",
             CommonNativeName = "القمر‎",
@@ -1147,13 +1147,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["ZDJ"] = "Comorian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KMF"] = new CurrencyDescriptor("Comorian franc", "Fr"),
+                ["KMF"] = new Currency("Comorian franc", "Fr"),
             },
             DialingCode = "+269",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cape Verde",
             CommonNativeName = "Cabo Verde",
@@ -1168,13 +1168,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CVE"] = new CurrencyDescriptor("Cape Verdean escudo", "Esc"),
+                ["CVE"] = new Currency("Cape Verdean escudo", "Esc"),
             },
             DialingCode = "+238",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Costa Rica",
             CommonNativeName = "Costa Rica",
@@ -1189,13 +1189,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CRC"] = new CurrencyDescriptor("Costa Rican colón", "₡"),
+                ["CRC"] = new Currency("Costa Rican colón", "₡"),
             },
             DialingCode = "+506",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cuba",
             CommonNativeName = "Cuba",
@@ -1210,14 +1210,14 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CUC"] = new CurrencyDescriptor("Cuban convertible peso", "$"),
-                ["CUP"] = new CurrencyDescriptor("Cuban peso", "$"),
+                ["CUC"] = new Currency("Cuban convertible peso", "$"),
+                ["CUP"] = new Currency("Cuban peso", "$"),
             },
             DialingCode = "+53",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Curaçao",
             CommonNativeName = "Curaçao",
@@ -1234,13 +1234,13 @@ public static partial class ISO3166
                 ["NLD"] = "Dutch",
                 ["PAP"] = "Papiamento",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ANG"] = new CurrencyDescriptor("Netherlands Antillean guilder", "ƒ"),
+                ["ANG"] = new Currency("Netherlands Antillean guilder", "ƒ"),
             },
             DialingCode = "+599",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Christmas Island",
             CommonNativeName = "Christmas Island",
@@ -1255,13 +1255,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
             },
             DialingCode = "+61",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cayman Islands",
             CommonNativeName = "Cayman Islands",
@@ -1276,13 +1276,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KYD"] = new CurrencyDescriptor("Cayman Islands dollar", "$"),
+                ["KYD"] = new Currency("Cayman Islands dollar", "$"),
             },
             DialingCode = "+1345",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cyprus",
             CommonNativeName = "Κύπρος",
@@ -1298,13 +1298,13 @@ public static partial class ISO3166
                 ["ELL"] = "Greek",
                 ["TUR"] = "Turkish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+357",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Czechia",
             CommonNativeName = "Česko",
@@ -1320,13 +1320,13 @@ public static partial class ISO3166
                 ["CES"] = "Czech",
                 ["SLK"] = "Slovak",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CZK"] = new CurrencyDescriptor("Czech koruna", "Kč"),
+                ["CZK"] = new Currency("Czech koruna", "Kč"),
             },
             DialingCode = "+420",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Germany",
             CommonNativeName = "Deutschland",
@@ -1341,13 +1341,13 @@ public static partial class ISO3166
             {
                 ["DEU"] = "German",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+49",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Djibouti",
             CommonNativeName = "جيبوتي‎",
@@ -1363,13 +1363,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DJF"] = new CurrencyDescriptor("Djiboutian franc", "Fr"),
+                ["DJF"] = new Currency("Djiboutian franc", "Fr"),
             },
             DialingCode = "+253",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Dominica",
             CommonNativeName = "Dominica",
@@ -1384,13 +1384,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1767",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Denmark",
             CommonNativeName = "Danmark",
@@ -1405,13 +1405,13 @@ public static partial class ISO3166
             {
                 ["DAN"] = "Danish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DKK"] = new CurrencyDescriptor("Danish krone", "kr"),
+                ["DKK"] = new Currency("Danish krone", "kr"),
             },
             DialingCode = "+45",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Dominican Republic",
             CommonNativeName = "República Dominicana",
@@ -1426,13 +1426,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DOP"] = new CurrencyDescriptor("Dominican peso", "$"),
+                ["DOP"] = new Currency("Dominican peso", "$"),
             },
             DialingCode = "+1",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Algeria",
             CommonNativeName = "الجزائر",
@@ -1447,13 +1447,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DZD"] = new CurrencyDescriptor("Algerian dinar", "د.ج"),
+                ["DZD"] = new Currency("Algerian dinar", "د.ج"),
             },
             DialingCode = "+213",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ecuador",
             CommonNativeName = "Ecuador",
@@ -1468,13 +1468,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+593",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Egypt",
             CommonNativeName = "مصر",
@@ -1489,13 +1489,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EGP"] = new CurrencyDescriptor("Egyptian pound", "£"),
+                ["EGP"] = new Currency("Egyptian pound", "£"),
             },
             DialingCode = "+20",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Eritrea",
             CommonNativeName = "إرتريا‎",
@@ -1512,13 +1512,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["TIR"] = "Tigrinya",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ERN"] = new CurrencyDescriptor("Eritrean nakfa", "Nfk"),
+                ["ERN"] = new Currency("Eritrean nakfa", "Nfk"),
             },
             DialingCode = "+291",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Western Sahara",
             CommonNativeName = "Western Sahara",
@@ -1535,15 +1535,15 @@ public static partial class ISO3166
                 ["MEY"] = "Hassaniya",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DZD"] = new CurrencyDescriptor("Algerian dinar", "دج"),
-                ["MAD"] = new CurrencyDescriptor("Moroccan dirham", "DH"),
-                ["MRU"] = new CurrencyDescriptor("Mauritanian ouguiya", "UM"),
+                ["DZD"] = new Currency("Algerian dinar", "دج"),
+                ["MAD"] = new Currency("Moroccan dirham", "DH"),
+                ["MRU"] = new Currency("Mauritanian ouguiya", "UM"),
             },
             DialingCode = "+2",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Spain",
             CommonNativeName = "España",
@@ -1561,13 +1561,13 @@ public static partial class ISO3166
                 ["EUS"] = "Basque",
                 ["GLC"] = "Galician",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+34",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Estonia",
             CommonNativeName = "Eesti",
@@ -1582,13 +1582,13 @@ public static partial class ISO3166
             {
                 ["EST"] = "Estonian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+372",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ethiopia",
             CommonNativeName = "ኢትዮጵያ",
@@ -1603,13 +1603,13 @@ public static partial class ISO3166
             {
                 ["AMH"] = "Amharic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ETB"] = new CurrencyDescriptor("Ethiopian birr", "Br"),
+                ["ETB"] = new Currency("Ethiopian birr", "Br"),
             },
             DialingCode = "+251",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Finland",
             CommonNativeName = "Suomi",
@@ -1625,13 +1625,13 @@ public static partial class ISO3166
                 ["FIN"] = "Finnish",
                 ["SWE"] = "Swedish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+358",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Fiji",
             CommonNativeName = "Fiji",
@@ -1648,13 +1648,13 @@ public static partial class ISO3166
                 ["FIJ"] = "Fijian",
                 ["HIF"] = "Fiji Hindi",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["FJD"] = new CurrencyDescriptor("Fijian dollar", "$"),
+                ["FJD"] = new Currency("Fijian dollar", "$"),
             },
             DialingCode = "+679",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Falkland Islands",
             CommonNativeName = "Falkland Islands",
@@ -1669,13 +1669,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["FKP"] = new CurrencyDescriptor("Falkland Islands pound", "£"),
+                ["FKP"] = new Currency("Falkland Islands pound", "£"),
             },
             DialingCode = "+500",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "France",
             CommonNativeName = "France",
@@ -1690,13 +1690,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+33",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Faroe Islands",
             CommonNativeName = "Færøerne",
@@ -1712,14 +1712,14 @@ public static partial class ISO3166
                 ["DAN"] = "Danish",
                 ["FAO"] = "Faroese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DKK"] = new CurrencyDescriptor("Danish krone", "kr"),
-                ["FOK"] = new CurrencyDescriptor("Faroese króna", "kr"),
+                ["DKK"] = new Currency("Danish krone", "kr"),
+                ["FOK"] = new Currency("Faroese króna", "kr"),
             },
             DialingCode = "+298",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Micronesia",
             CommonNativeName = "Micronesia",
@@ -1734,13 +1734,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+691",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Gabon",
             CommonNativeName = "Gabon",
@@ -1755,13 +1755,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+241",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "United Kingdom",
             CommonNativeName = "United Kingdom",
@@ -1776,13 +1776,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("British pound", "£"),
+                ["GBP"] = new Currency("British pound", "£"),
             },
             DialingCode = "+44",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Georgia",
             CommonNativeName = "საქართველო",
@@ -1797,13 +1797,13 @@ public static partial class ISO3166
             {
                 ["KAT"] = "Georgian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GEL"] = new CurrencyDescriptor("lari", "₾"),
+                ["GEL"] = new Currency("lari", "₾"),
             },
             DialingCode = "+995",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guernsey",
             CommonNativeName = "Guernsey",
@@ -1820,14 +1820,14 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["NFR"] = "Guernésiais",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("British pound", "£"),
-                ["GGP"] = new CurrencyDescriptor("Guernsey pound", "£"),
+                ["GBP"] = new Currency("British pound", "£"),
+                ["GGP"] = new Currency("Guernsey pound", "£"),
             },
             DialingCode = "+44",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ghana",
             CommonNativeName = "Ghana",
@@ -1842,13 +1842,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GHS"] = new CurrencyDescriptor("Ghanaian cedi", "₵"),
+                ["GHS"] = new Currency("Ghanaian cedi", "₵"),
             },
             DialingCode = "+233",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Gibraltar",
             CommonNativeName = "Gibraltar",
@@ -1863,13 +1863,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GIP"] = new CurrencyDescriptor("Gibraltar pound", "£"),
+                ["GIP"] = new Currency("Gibraltar pound", "£"),
             },
             DialingCode = "+350",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guinea",
             CommonNativeName = "Guinée",
@@ -1884,13 +1884,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GNF"] = new CurrencyDescriptor("Guinean franc", "Fr"),
+                ["GNF"] = new Currency("Guinean franc", "Fr"),
             },
             DialingCode = "+224",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guadeloupe",
             CommonNativeName = "Guadeloupe",
@@ -1905,13 +1905,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+590",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Gambia",
             CommonNativeName = "Gambia",
@@ -1926,13 +1926,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GMD"] = new CurrencyDescriptor("dalasi", "D"),
+                ["GMD"] = new Currency("dalasi", "D"),
             },
             DialingCode = "+220",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guinea-Bissau",
             CommonNativeName = "Guiné-Bissau",
@@ -1948,13 +1948,13 @@ public static partial class ISO3166
                 ["POR"] = "Portuguese",
                 ["POV"] = "Upper Guinea Creole",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+245",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Equatorial Guinea",
             CommonNativeName = "Guinée équatoriale",
@@ -1971,13 +1971,13 @@ public static partial class ISO3166
                 ["POR"] = "Portuguese",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+240",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Greece",
             CommonNativeName = "Ελλάδα",
@@ -1992,13 +1992,13 @@ public static partial class ISO3166
             {
                 ["ELL"] = "Greek",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+30",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Grenada",
             CommonNativeName = "Grenada",
@@ -2013,13 +2013,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1473",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Greenland",
             CommonNativeName = "Kalaallit Nunaat",
@@ -2034,13 +2034,13 @@ public static partial class ISO3166
             {
                 ["KAL"] = "Greenlandic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["DKK"] = new CurrencyDescriptor("krone", "kr."),
+                ["DKK"] = new Currency("krone", "kr."),
             },
             DialingCode = "+299",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guatemala",
             CommonNativeName = "Guatemala",
@@ -2055,13 +2055,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GTQ"] = new CurrencyDescriptor("Guatemalan quetzal", "Q"),
+                ["GTQ"] = new Currency("Guatemalan quetzal", "Q"),
             },
             DialingCode = "+502",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "French Guiana",
             CommonNativeName = "Guyane française",
@@ -2076,13 +2076,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+594",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guam",
             CommonNativeName = "Guåhån",
@@ -2099,13 +2099,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1671",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Guyana",
             CommonNativeName = "Guyana",
@@ -2120,13 +2120,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GYD"] = new CurrencyDescriptor("Guyanese dollar", "$"),
+                ["GYD"] = new Currency("Guyanese dollar", "$"),
             },
             DialingCode = "+592",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Hong Kong",
             CommonNativeName = "Hong Kong",
@@ -2142,13 +2142,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["ZHO"] = "Chinese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["HKD"] = new CurrencyDescriptor("Hong Kong dollar", "$"),
+                ["HKD"] = new Currency("Hong Kong dollar", "$"),
             },
             DialingCode = "+852",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Heard Island and McDonald Islands",
             CommonNativeName = "Heard Island and McDonald Islands",
@@ -2163,12 +2163,12 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
             },
             DialingCode = "",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Honduras",
             CommonNativeName = "Honduras",
@@ -2183,13 +2183,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["HNL"] = new CurrencyDescriptor("Honduran lempira", "L"),
+                ["HNL"] = new Currency("Honduran lempira", "L"),
             },
             DialingCode = "+504",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Croatia",
             CommonNativeName = "Hrvatska",
@@ -2204,13 +2204,13 @@ public static partial class ISO3166
             {
                 ["HRV"] = "Croatian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+385",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Haiti",
             CommonNativeName = "Haïti",
@@ -2226,13 +2226,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["HAT"] = "Haitian Creole",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["HTG"] = new CurrencyDescriptor("Haitian gourde", "G"),
+                ["HTG"] = new Currency("Haitian gourde", "G"),
             },
             DialingCode = "+509",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Hungary",
             CommonNativeName = "Magyarország",
@@ -2247,13 +2247,13 @@ public static partial class ISO3166
             {
                 ["HUN"] = "Hungarian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["HUF"] = new CurrencyDescriptor("Hungarian forint", "Ft"),
+                ["HUF"] = new Currency("Hungarian forint", "Ft"),
             },
             DialingCode = "+36",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Indonesia",
             CommonNativeName = "Indonesia",
@@ -2268,13 +2268,13 @@ public static partial class ISO3166
             {
                 ["IND"] = "Indonesian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["IDR"] = new CurrencyDescriptor("Indonesian rupiah", "Rp"),
+                ["IDR"] = new Currency("Indonesian rupiah", "Rp"),
             },
             DialingCode = "+62",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Isle of Man",
             CommonNativeName = "Isle of Man",
@@ -2290,14 +2290,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["GLV"] = "Manx",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("British pound", "£"),
-                ["IMP"] = new CurrencyDescriptor("Manx pound", "£"),
+                ["GBP"] = new Currency("British pound", "£"),
+                ["IMP"] = new Currency("Manx pound", "£"),
             },
             DialingCode = "+44",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "India",
             CommonNativeName = "India",
@@ -2314,13 +2314,13 @@ public static partial class ISO3166
                 ["HIN"] = "Hindi",
                 ["TAM"] = "Tamil",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["INR"] = new CurrencyDescriptor("Indian rupee", "₹"),
+                ["INR"] = new Currency("Indian rupee", "₹"),
             },
             DialingCode = "+91",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "British Indian Ocean Territory",
             CommonNativeName = "British Indian Ocean Territory",
@@ -2335,13 +2335,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+246",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ireland",
             CommonNativeName = "Ireland",
@@ -2357,13 +2357,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["GLE"] = "Irish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+353",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Iran",
             CommonNativeName = "ایران",
@@ -2378,13 +2378,13 @@ public static partial class ISO3166
             {
                 ["FAS"] = "Persian (Farsi)",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["IRR"] = new CurrencyDescriptor("Iranian rial", "﷼"),
+                ["IRR"] = new Currency("Iranian rial", "﷼"),
             },
             DialingCode = "+98",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Iraq",
             CommonNativeName = "العراق",
@@ -2401,13 +2401,13 @@ public static partial class ISO3166
                 ["ARC"] = "Aramaic",
                 ["CKB"] = "Sorani",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["IQD"] = new CurrencyDescriptor("Iraqi dinar", "ع.د"),
+                ["IQD"] = new Currency("Iraqi dinar", "ع.د"),
             },
             DialingCode = "+964",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Iceland",
             CommonNativeName = "Ísland",
@@ -2422,13 +2422,13 @@ public static partial class ISO3166
             {
                 ["ISL"] = "Icelandic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ISK"] = new CurrencyDescriptor("Icelandic króna", "kr"),
+                ["ISK"] = new Currency("Icelandic króna", "kr"),
             },
             DialingCode = "+354",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Israel",
             CommonNativeName = "إسرائيل",
@@ -2444,13 +2444,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["HEB"] = "Hebrew",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ILS"] = new CurrencyDescriptor("Israeli new shekel", "₪"),
+                ["ILS"] = new Currency("Israeli new shekel", "₪"),
             },
             DialingCode = "+972",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Italy",
             CommonNativeName = "Italia",
@@ -2466,13 +2466,13 @@ public static partial class ISO3166
                 ["ITA"] = "Italian",
                 ["CAT"] = "Catalan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+39",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Jamaica",
             CommonNativeName = "Jamaica",
@@ -2488,13 +2488,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["JAM"] = "Jamaican Patois",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["JMD"] = new CurrencyDescriptor("Jamaican dollar", "$"),
+                ["JMD"] = new Currency("Jamaican dollar", "$"),
             },
             DialingCode = "+1",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Jersey",
             CommonNativeName = "Jersey",
@@ -2511,14 +2511,14 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["NRF"] = "Jèrriais",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("British pound", "£"),
-                ["JEP"] = new CurrencyDescriptor("Jersey pound", "£"),
+                ["GBP"] = new Currency("British pound", "£"),
+                ["JEP"] = new Currency("Jersey pound", "£"),
             },
             DialingCode = "+44",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Jordan",
             CommonNativeName = "الأردن",
@@ -2533,13 +2533,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["JOD"] = new CurrencyDescriptor("Jordanian dinar", "د.ا"),
+                ["JOD"] = new Currency("Jordanian dinar", "د.ا"),
             },
             DialingCode = "+962",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Japan",
             CommonNativeName = "日本",
@@ -2554,13 +2554,13 @@ public static partial class ISO3166
             {
                 ["JPN"] = "Japanese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["JPY"] = new CurrencyDescriptor("Japanese yen", "¥"),
+                ["JPY"] = new Currency("Japanese yen", "¥"),
             },
             DialingCode = "+81",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kazakhstan",
             CommonNativeName = "Қазақстан",
@@ -2576,13 +2576,13 @@ public static partial class ISO3166
                 ["KAZ"] = "Kazakh",
                 ["RUS"] = "Russian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KZT"] = new CurrencyDescriptor("Kazakhstani tenge", "₸"),
+                ["KZT"] = new Currency("Kazakhstani tenge", "₸"),
             },
             DialingCode = "+7",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kenya",
             CommonNativeName = "Kenya",
@@ -2598,13 +2598,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SWA"] = "Swahili",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KES"] = new CurrencyDescriptor("Kenyan shilling", "Sh"),
+                ["KES"] = new Currency("Kenyan shilling", "Sh"),
             },
             DialingCode = "+254",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kyrgyzstan",
             CommonNativeName = "Кыргызстан",
@@ -2620,13 +2620,13 @@ public static partial class ISO3166
                 ["KIR"] = "Kyrgyz",
                 ["RUS"] = "Russian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KGS"] = new CurrencyDescriptor("Kyrgyzstani som", "с"),
+                ["KGS"] = new Currency("Kyrgyzstani som", "с"),
             },
             DialingCode = "+996",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Cambodia",
             CommonNativeName = "Kâmpŭchéa",
@@ -2641,14 +2641,14 @@ public static partial class ISO3166
             {
                 ["KHM"] = "Khmer",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KHR"] = new CurrencyDescriptor("Cambodian riel", "៛"),
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["KHR"] = new Currency("Cambodian riel", "៛"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+855",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kiribati",
             CommonNativeName = "Kiribati",
@@ -2664,14 +2664,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["GIL"] = "Gilbertese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
-                ["KID"] = new CurrencyDescriptor("Kiribati dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
+                ["KID"] = new Currency("Kiribati dollar", "$"),
             },
             DialingCode = "+686",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Kitts and Nevis",
             CommonNativeName = "Saint Kitts and Nevis",
@@ -2686,13 +2686,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1869",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "South Korea",
             CommonNativeName = "한국",
@@ -2707,13 +2707,13 @@ public static partial class ISO3166
             {
                 ["KOR"] = "Korean",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KRW"] = new CurrencyDescriptor("South Korean won", "₩"),
+                ["KRW"] = new Currency("South Korean won", "₩"),
             },
             DialingCode = "+82",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kosovo",
             CommonNativeName = "Kosova",
@@ -2729,13 +2729,13 @@ public static partial class ISO3166
                 ["SQI"] = "Albanian",
                 ["SRP"] = "Serbian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+383",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Kuwait",
             CommonNativeName = "الكويت",
@@ -2750,13 +2750,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KWD"] = new CurrencyDescriptor("Kuwaiti dinar", "د.ك"),
+                ["KWD"] = new Currency("Kuwaiti dinar", "د.ك"),
             },
             DialingCode = "+965",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Laos",
             CommonNativeName = "ສປປລາວ",
@@ -2771,13 +2771,13 @@ public static partial class ISO3166
             {
                 ["LAO"] = "Lao",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LAK"] = new CurrencyDescriptor("Lao kip", "₭"),
+                ["LAK"] = new Currency("Lao kip", "₭"),
             },
             DialingCode = "+856",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Lebanon",
             CommonNativeName = "لبنان",
@@ -2793,13 +2793,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LBP"] = new CurrencyDescriptor("Lebanese pound", "ل.ل"),
+                ["LBP"] = new Currency("Lebanese pound", "ل.ل"),
             },
             DialingCode = "+961",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Liberia",
             CommonNativeName = "Liberia",
@@ -2814,13 +2814,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LRD"] = new CurrencyDescriptor("Liberian dollar", "$"),
+                ["LRD"] = new Currency("Liberian dollar", "$"),
             },
             DialingCode = "+231",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Libya",
             CommonNativeName = "‏ليبيا",
@@ -2835,13 +2835,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LYD"] = new CurrencyDescriptor("Libyan dinar", "ل.د"),
+                ["LYD"] = new Currency("Libyan dinar", "ل.د"),
             },
             DialingCode = "+218",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Lucia",
             CommonNativeName = "Saint Lucia",
@@ -2856,13 +2856,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1758",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Liechtenstein",
             CommonNativeName = "Liechtenstein",
@@ -2877,13 +2877,13 @@ public static partial class ISO3166
             {
                 ["DEU"] = "German",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["CHF"] = new CurrencyDescriptor("Swiss franc", "Fr"),
+                ["CHF"] = new Currency("Swiss franc", "Fr"),
             },
             DialingCode = "+423",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Sri Lanka",
             CommonNativeName = "ශ්‍රී ලංකාව",
@@ -2899,13 +2899,13 @@ public static partial class ISO3166
                 ["SIN"] = "Sinhala",
                 ["TAM"] = "Tamil",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LKR"] = new CurrencyDescriptor("Sri Lankan rupee", "Rs  රු"),
+                ["LKR"] = new Currency("Sri Lankan rupee", "Rs  රු"),
             },
             DialingCode = "+94",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Lesotho",
             CommonNativeName = "Lesotho",
@@ -2921,14 +2921,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SOT"] = "Sotho",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["LSL"] = new CurrencyDescriptor("Lesotho loti", "L"),
-                ["ZAR"] = new CurrencyDescriptor("South African rand", "R"),
+                ["LSL"] = new Currency("Lesotho loti", "L"),
+                ["ZAR"] = new Currency("South African rand", "R"),
             },
             DialingCode = "+266",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Lithuania",
             CommonNativeName = "Lietuva",
@@ -2943,13 +2943,13 @@ public static partial class ISO3166
             {
                 ["LIT"] = "Lithuanian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+370",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Luxembourg",
             CommonNativeName = "Luxemburg",
@@ -2966,13 +2966,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["LTZ"] = "Luxembourgish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+352",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Latvia",
             CommonNativeName = "Latvija",
@@ -2987,13 +2987,13 @@ public static partial class ISO3166
             {
                 ["LAV"] = "Latvian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+371",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Macau",
             CommonNativeName = "Macau",
@@ -3009,13 +3009,13 @@ public static partial class ISO3166
                 ["POR"] = "Portuguese",
                 ["ZHO"] = "Chinese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MOP"] = new CurrencyDescriptor("Macanese pataca", "P"),
+                ["MOP"] = new Currency("Macanese pataca", "P"),
             },
             DialingCode = "+853",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Martin",
             CommonNativeName = "Saint-Martin",
@@ -3030,13 +3030,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+590",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Morocco",
             CommonNativeName = "المغرب",
@@ -3052,13 +3052,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["BER"] = "Berber",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MAD"] = new CurrencyDescriptor("Moroccan dirham", "د.م."),
+                ["MAD"] = new Currency("Moroccan dirham", "د.م."),
             },
             DialingCode = "+212",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Monaco",
             CommonNativeName = "Monaco",
@@ -3073,13 +3073,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+377",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Moldova",
             CommonNativeName = "Moldova",
@@ -3094,13 +3094,13 @@ public static partial class ISO3166
             {
                 ["RON"] = "Romanian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MDL"] = new CurrencyDescriptor("Moldovan leu", "L"),
+                ["MDL"] = new Currency("Moldovan leu", "L"),
             },
             DialingCode = "+373",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Madagascar",
             CommonNativeName = "Madagascar",
@@ -3116,13 +3116,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["MLG"] = "Malagasy",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MGA"] = new CurrencyDescriptor("Malagasy ariary", "Ar"),
+                ["MGA"] = new Currency("Malagasy ariary", "Ar"),
             },
             DialingCode = "+261",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Maldives",
             CommonNativeName = "ދިވެހިރާއްޖޭގެ",
@@ -3137,13 +3137,13 @@ public static partial class ISO3166
             {
                 ["DIV"] = "Maldivian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MVR"] = new CurrencyDescriptor("Maldivian rufiyaa", ".ރ"),
+                ["MVR"] = new Currency("Maldivian rufiyaa", ".ރ"),
             },
             DialingCode = "+960",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mexico",
             CommonNativeName = "México",
@@ -3158,13 +3158,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MXN"] = new CurrencyDescriptor("Mexican peso", "$"),
+                ["MXN"] = new Currency("Mexican peso", "$"),
             },
             DialingCode = "+52",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Marshall Islands",
             CommonNativeName = "Marshall Islands",
@@ -3180,13 +3180,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["MAH"] = "Marshallese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+692",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "North Macedonia",
             CommonNativeName = "Македонија",
@@ -3201,13 +3201,13 @@ public static partial class ISO3166
             {
                 ["MKD"] = "Macedonian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MKD"] = new CurrencyDescriptor("denar", "den"),
+                ["MKD"] = new Currency("denar", "den"),
             },
             DialingCode = "+389",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mali",
             CommonNativeName = "Mali",
@@ -3222,13 +3222,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+223",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Malta",
             CommonNativeName = "Malta",
@@ -3244,13 +3244,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["MLT"] = "Maltese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+356",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Myanmar",
             CommonNativeName = "မြန်မာ",
@@ -3265,13 +3265,13 @@ public static partial class ISO3166
             {
                 ["MYA"] = "Burmese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MMK"] = new CurrencyDescriptor("Burmese kyat", "Ks"),
+                ["MMK"] = new Currency("Burmese kyat", "Ks"),
             },
             DialingCode = "+95",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Montenegro",
             CommonNativeName = "Црна Гора",
@@ -3286,13 +3286,13 @@ public static partial class ISO3166
             {
                 ["CNR"] = "Montenegrin",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+382",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mongolia",
             CommonNativeName = "Монгол улс",
@@ -3307,13 +3307,13 @@ public static partial class ISO3166
             {
                 ["MON"] = "Mongolian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MNT"] = new CurrencyDescriptor("Mongolian tögrög", "₮"),
+                ["MNT"] = new Currency("Mongolian tögrög", "₮"),
             },
             DialingCode = "+976",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Northern Mariana Islands",
             CommonNativeName = "Northern Mariana Islands",
@@ -3330,13 +3330,13 @@ public static partial class ISO3166
                 ["CHA"] = "Chamorro",
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1670",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mozambique",
             CommonNativeName = "Moçambique",
@@ -3351,13 +3351,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MZN"] = new CurrencyDescriptor("Mozambican metical", "MT"),
+                ["MZN"] = new Currency("Mozambican metical", "MT"),
             },
             DialingCode = "+258",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mauritania",
             CommonNativeName = "موريتانيا",
@@ -3372,13 +3372,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MRU"] = new CurrencyDescriptor("Mauritanian ouguiya", "UM"),
+                ["MRU"] = new Currency("Mauritanian ouguiya", "UM"),
             },
             DialingCode = "+222",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Montserrat",
             CommonNativeName = "Montserrat",
@@ -3393,13 +3393,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1664",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Martinique",
             CommonNativeName = "Martinique",
@@ -3414,13 +3414,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+596",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mauritius",
             CommonNativeName = "Mauritius",
@@ -3437,13 +3437,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["MFE"] = "Mauritian Creole",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MUR"] = new CurrencyDescriptor("Mauritian rupee", "₨"),
+                ["MUR"] = new Currency("Mauritian rupee", "₨"),
             },
             DialingCode = "+230",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Malawi",
             CommonNativeName = "Malawi",
@@ -3459,13 +3459,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["NYA"] = "Chewa",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MWK"] = new CurrencyDescriptor("Malawian kwacha", "MK"),
+                ["MWK"] = new Currency("Malawian kwacha", "MK"),
             },
             DialingCode = "+265",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Malaysia",
             CommonNativeName = "Malaysia",
@@ -3481,13 +3481,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["MSA"] = "Malay",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["MYR"] = new CurrencyDescriptor("Malaysian ringgit", "RM"),
+                ["MYR"] = new Currency("Malaysian ringgit", "RM"),
             },
             DialingCode = "+60",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Mayotte",
             CommonNativeName = "Mayotte",
@@ -3502,13 +3502,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+262",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Namibia",
             CommonNativeName = "Namibië",
@@ -3531,14 +3531,14 @@ public static partial class ISO3166
                 ["NDO"] = "Ndonga",
                 ["TSN"] = "Tswana",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NAD"] = new CurrencyDescriptor("Namibian dollar", "$"),
-                ["ZAR"] = new CurrencyDescriptor("South African rand", "R"),
+                ["NAD"] = new Currency("Namibian dollar", "$"),
+                ["ZAR"] = new Currency("South African rand", "R"),
             },
             DialingCode = "+264",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "New Caledonia",
             CommonNativeName = "Nouvelle-Calédonie",
@@ -3553,13 +3553,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XPF"] = new CurrencyDescriptor("CFP franc", "₣"),
+                ["XPF"] = new Currency("CFP franc", "₣"),
             },
             DialingCode = "+687",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Niger",
             CommonNativeName = "Niger",
@@ -3574,13 +3574,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+227",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Norfolk Island",
             CommonNativeName = "Norfolk Island",
@@ -3596,13 +3596,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["PIH"] = "Norfuk",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
             },
             DialingCode = "+672",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Nigeria",
             CommonNativeName = "Nigeria",
@@ -3617,13 +3617,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NGN"] = new CurrencyDescriptor("Nigerian naira", "₦"),
+                ["NGN"] = new Currency("Nigerian naira", "₦"),
             },
             DialingCode = "+234",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Nicaragua",
             CommonNativeName = "Nicaragua",
@@ -3638,13 +3638,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NIO"] = new CurrencyDescriptor("Nicaraguan córdoba", "C$"),
+                ["NIO"] = new Currency("Nicaraguan córdoba", "C$"),
             },
             DialingCode = "+505",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Niue",
             CommonNativeName = "Niue",
@@ -3660,13 +3660,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["NIU"] = "Niuean",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NZD"] = new CurrencyDescriptor("New Zealand dollar", "$"),
+                ["NZD"] = new Currency("New Zealand dollar", "$"),
             },
             DialingCode = "+683",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Netherlands",
             CommonNativeName = "Nederland",
@@ -3681,13 +3681,13 @@ public static partial class ISO3166
             {
                 ["NLD"] = "Dutch",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+31",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Norway",
             CommonNativeName = "Noreg",
@@ -3704,13 +3704,13 @@ public static partial class ISO3166
                 ["NOB"] = "Norwegian Bokmål",
                 ["SMI"] = "Sami",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NOK"] = new CurrencyDescriptor("Norwegian krone", "kr"),
+                ["NOK"] = new Currency("Norwegian krone", "kr"),
             },
             DialingCode = "+47",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Nepal",
             CommonNativeName = "नेपाल",
@@ -3725,13 +3725,13 @@ public static partial class ISO3166
             {
                 ["NEP"] = "Nepali",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NPR"] = new CurrencyDescriptor("Nepalese rupee", "₨"),
+                ["NPR"] = new Currency("Nepalese rupee", "₨"),
             },
             DialingCode = "+977",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Nauru",
             CommonNativeName = "Nauru",
@@ -3747,13 +3747,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["NAU"] = "Nauru",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
             },
             DialingCode = "+674",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "New Zealand",
             CommonNativeName = "New Zealand",
@@ -3770,13 +3770,13 @@ public static partial class ISO3166
                 ["MRI"] = "Māori",
                 ["NZS"] = "New Zealand Sign Language",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NZD"] = new CurrencyDescriptor("New Zealand dollar", "$"),
+                ["NZD"] = new Currency("New Zealand dollar", "$"),
             },
             DialingCode = "+64",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Oman",
             CommonNativeName = "عمان",
@@ -3791,13 +3791,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["OMR"] = new CurrencyDescriptor("Omani rial", "ر.ع."),
+                ["OMR"] = new Currency("Omani rial", "ر.ع."),
             },
             DialingCode = "+968",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Pakistan",
             CommonNativeName = "Pakistan",
@@ -3813,13 +3813,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["URD"] = "Urdu",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PKR"] = new CurrencyDescriptor("Pakistani rupee", "₨"),
+                ["PKR"] = new Currency("Pakistani rupee", "₨"),
             },
             DialingCode = "+92",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Panama",
             CommonNativeName = "Panamá",
@@ -3834,14 +3834,14 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PAB"] = new CurrencyDescriptor("Panamanian balboa", "B/."),
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["PAB"] = new Currency("Panamanian balboa", "B/."),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+507",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Pitcairn Islands",
             CommonNativeName = "Pitcairn Islands",
@@ -3856,13 +3856,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NZD"] = new CurrencyDescriptor("New Zealand dollar", "$"),
+                ["NZD"] = new Currency("New Zealand dollar", "$"),
             },
             DialingCode = "+64",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Peru",
             CommonNativeName = "Piruw",
@@ -3879,13 +3879,13 @@ public static partial class ISO3166
                 ["QUE"] = "Quechua",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PEN"] = new CurrencyDescriptor("Peruvian sol", "S/ "),
+                ["PEN"] = new Currency("Peruvian sol", "S/ "),
             },
             DialingCode = "+51",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Philippines",
             CommonNativeName = "Philippines",
@@ -3901,13 +3901,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["FIL"] = "Filipino",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PHP"] = new CurrencyDescriptor("Philippine peso", "₱"),
+                ["PHP"] = new Currency("Philippine peso", "₱"),
             },
             DialingCode = "+63",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Palau",
             CommonNativeName = "Palau",
@@ -3923,13 +3923,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["PAU"] = "Palauan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+680",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Papua New Guinea",
             CommonNativeName = "Papua New Guinea",
@@ -3946,13 +3946,13 @@ public static partial class ISO3166
                 ["HMO"] = "Hiri Motu",
                 ["TPI"] = "Tok Pisin",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PGK"] = new CurrencyDescriptor("Papua New Guinean kina", "K"),
+                ["PGK"] = new Currency("Papua New Guinean kina", "K"),
             },
             DialingCode = "+675",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Poland",
             CommonNativeName = "Polska",
@@ -3967,13 +3967,13 @@ public static partial class ISO3166
             {
                 ["POL"] = "Polish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PLN"] = new CurrencyDescriptor("Polish złoty", "zł"),
+                ["PLN"] = new Currency("Polish złoty", "zł"),
             },
             DialingCode = "+48",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Puerto Rico",
             CommonNativeName = "Puerto Rico",
@@ -3989,13 +3989,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "North Korea",
             CommonNativeName = "조선",
@@ -4010,13 +4010,13 @@ public static partial class ISO3166
             {
                 ["KOR"] = "Korean",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["KPW"] = new CurrencyDescriptor("North Korean won", "₩"),
+                ["KPW"] = new Currency("North Korean won", "₩"),
             },
             DialingCode = "+850",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Portugal",
             CommonNativeName = "Portugal",
@@ -4031,13 +4031,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+351",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Paraguay",
             CommonNativeName = "Paraguái",
@@ -4053,13 +4053,13 @@ public static partial class ISO3166
                 ["GRN"] = "Guaraní",
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["PYG"] = new CurrencyDescriptor("Paraguayan guaraní", "₲"),
+                ["PYG"] = new Currency("Paraguayan guaraní", "₲"),
             },
             DialingCode = "+595",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Palestine",
             CommonNativeName = "فلسطين",
@@ -4074,15 +4074,15 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EGP"] = new CurrencyDescriptor("Egyptian pound", "E£"),
-                ["ILS"] = new CurrencyDescriptor("Israeli new shekel", "₪"),
-                ["JOD"] = new CurrencyDescriptor("Jordanian dinar", "JD"),
+                ["EGP"] = new Currency("Egyptian pound", "E£"),
+                ["ILS"] = new Currency("Israeli new shekel", "₪"),
+                ["JOD"] = new Currency("Jordanian dinar", "JD"),
             },
             DialingCode = "+970",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "French Polynesia",
             CommonNativeName = "Polynésie française",
@@ -4097,13 +4097,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XPF"] = new CurrencyDescriptor("CFP franc", "₣"),
+                ["XPF"] = new Currency("CFP franc", "₣"),
             },
             DialingCode = "+689",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Qatar",
             CommonNativeName = "قطر",
@@ -4118,13 +4118,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["QAR"] = new CurrencyDescriptor("Qatari riyal", "ر.ق"),
+                ["QAR"] = new Currency("Qatari riyal", "ر.ق"),
             },
             DialingCode = "+974",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Réunion",
             CommonNativeName = "La Réunion",
@@ -4139,13 +4139,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+262",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Romania",
             CommonNativeName = "România",
@@ -4160,13 +4160,13 @@ public static partial class ISO3166
             {
                 ["RON"] = "Romanian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["RON"] = new CurrencyDescriptor("Romanian leu", "lei"),
+                ["RON"] = new Currency("Romanian leu", "lei"),
             },
             DialingCode = "+40",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Russia",
             CommonNativeName = "Россия",
@@ -4181,13 +4181,13 @@ public static partial class ISO3166
             {
                 ["RUS"] = "Russian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["RUB"] = new CurrencyDescriptor("Russian ruble", "₽"),
+                ["RUB"] = new Currency("Russian ruble", "₽"),
             },
             DialingCode = "+7",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Rwanda",
             CommonNativeName = "Rwanda",
@@ -4204,13 +4204,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["KIN"] = "Kinyarwanda",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["RWF"] = new CurrencyDescriptor("Rwandan franc", "Fr"),
+                ["RWF"] = new Currency("Rwandan franc", "Fr"),
             },
             DialingCode = "+250",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saudi Arabia",
             CommonNativeName = "العربية السعودية",
@@ -4225,13 +4225,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SAR"] = new CurrencyDescriptor("Saudi riyal", "ر.س"),
+                ["SAR"] = new Currency("Saudi riyal", "ر.س"),
             },
             DialingCode = "+966",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Sudan",
             CommonNativeName = "السودان",
@@ -4247,13 +4247,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SDG"] = new CurrencyDescriptor("Sudanese pound", "ج.س"),
+                ["SDG"] = new Currency("Sudanese pound", "ج.س"),
             },
             DialingCode = "+249",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Senegal",
             CommonNativeName = "Sénégal",
@@ -4268,13 +4268,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+221",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Singapore",
             CommonNativeName = "Singapore",
@@ -4292,13 +4292,13 @@ public static partial class ISO3166
                 ["MSA"] = "Malay",
                 ["TAM"] = "Tamil",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SGD"] = new CurrencyDescriptor("Singapore dollar", "$"),
+                ["SGD"] = new Currency("Singapore dollar", "$"),
             },
             DialingCode = "+65",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "South Georgia",
             CommonNativeName = "South Georgia",
@@ -4313,13 +4313,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["GBP"] = new CurrencyDescriptor("British pound", "£"),
+                ["GBP"] = new Currency("British pound", "£"),
             },
             DialingCode = "+500",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Svalbard and Jan Mayen",
             CommonNativeName = "Svalbard og Jan Mayen",
@@ -4334,13 +4334,13 @@ public static partial class ISO3166
             {
                 ["NOR"] = "Norwegian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NOK"] = new CurrencyDescriptor("krone", "kr"),
+                ["NOK"] = new Currency("krone", "kr"),
             },
             DialingCode = "+4779",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Solomon Islands",
             CommonNativeName = "Solomon Islands",
@@ -4355,13 +4355,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SBD"] = new CurrencyDescriptor("Solomon Islands dollar", "$"),
+                ["SBD"] = new Currency("Solomon Islands dollar", "$"),
             },
             DialingCode = "+677",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Sierra Leone",
             CommonNativeName = "Sierra Leone",
@@ -4376,13 +4376,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SLE"] = new CurrencyDescriptor("Leone", "Le"),
+                ["SLE"] = new Currency("Leone", "Le"),
             },
             DialingCode = "+232",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "El Salvador",
             CommonNativeName = "El Salvador",
@@ -4397,13 +4397,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+503",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "San Marino",
             CommonNativeName = "San Marino",
@@ -4418,13 +4418,13 @@ public static partial class ISO3166
             {
                 ["ITA"] = "Italian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+378",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Somalia",
             CommonNativeName = "الصومال‎‎",
@@ -4440,13 +4440,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["SOM"] = "Somali",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SOS"] = new CurrencyDescriptor("Somali shilling", "Sh"),
+                ["SOS"] = new Currency("Somali shilling", "Sh"),
             },
             DialingCode = "+252",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Pierre and Miquelon",
             CommonNativeName = "Saint-Pierre-et-Miquelon",
@@ -4461,13 +4461,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+508",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Serbia",
             CommonNativeName = "Србија",
@@ -4482,13 +4482,13 @@ public static partial class ISO3166
             {
                 ["SRP"] = "Serbian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["RSD"] = new CurrencyDescriptor("Serbian dinar", "дин."),
+                ["RSD"] = new Currency("Serbian dinar", "дин."),
             },
             DialingCode = "+381",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "South Sudan",
             CommonNativeName = "South Sudan",
@@ -4503,13 +4503,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SSP"] = new CurrencyDescriptor("South Sudanese pound", "£"),
+                ["SSP"] = new Currency("South Sudanese pound", "£"),
             },
             DialingCode = "+211",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "São Tomé and Príncipe",
             CommonNativeName = "São Tomé e Príncipe",
@@ -4524,13 +4524,13 @@ public static partial class ISO3166
             {
                 ["POR"] = "Portuguese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["STN"] = new CurrencyDescriptor("São Tomé and Príncipe dobra", "Db"),
+                ["STN"] = new Currency("São Tomé and Príncipe dobra", "Db"),
             },
             DialingCode = "+239",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Suriname",
             CommonNativeName = "Suriname",
@@ -4545,13 +4545,13 @@ public static partial class ISO3166
             {
                 ["NLD"] = "Dutch",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SRD"] = new CurrencyDescriptor("Surinamese dollar", "$"),
+                ["SRD"] = new Currency("Surinamese dollar", "$"),
             },
             DialingCode = "+597",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Slovakia",
             CommonNativeName = "Slovensko",
@@ -4566,13 +4566,13 @@ public static partial class ISO3166
             {
                 ["SLK"] = "Slovak",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+421",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Slovenia",
             CommonNativeName = "Slovenija",
@@ -4587,13 +4587,13 @@ public static partial class ISO3166
             {
                 ["SLV"] = "Slovene",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+386",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Sweden",
             CommonNativeName = "Sverige",
@@ -4608,13 +4608,13 @@ public static partial class ISO3166
             {
                 ["SWE"] = "Swedish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SEK"] = new CurrencyDescriptor("Swedish krona", "kr"),
+                ["SEK"] = new Currency("Swedish krona", "kr"),
             },
             DialingCode = "+46",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Eswatini",
             CommonNativeName = "Eswatini",
@@ -4630,14 +4630,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SSW"] = "Swazi",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SZL"] = new CurrencyDescriptor("Swazi lilangeni", "L"),
-                ["ZAR"] = new CurrencyDescriptor("South African rand", "R"),
+                ["SZL"] = new Currency("Swazi lilangeni", "L"),
+                ["ZAR"] = new Currency("South African rand", "R"),
             },
             DialingCode = "+268",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Sint Maarten",
             CommonNativeName = "Sint Maarten",
@@ -4654,13 +4654,13 @@ public static partial class ISO3166
                 ["FRA"] = "French",
                 ["NLD"] = "Dutch",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ANG"] = new CurrencyDescriptor("Netherlands Antillean guilder", "ƒ"),
+                ["ANG"] = new Currency("Netherlands Antillean guilder", "ƒ"),
             },
             DialingCode = "+1721",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Seychelles",
             CommonNativeName = "Sesel",
@@ -4677,13 +4677,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SCR"] = new CurrencyDescriptor("Seychellois rupee", "₨"),
+                ["SCR"] = new Currency("Seychellois rupee", "₨"),
             },
             DialingCode = "+248",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Syria",
             CommonNativeName = "سوريا",
@@ -4698,13 +4698,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["SYP"] = new CurrencyDescriptor("Syrian pound", "£"),
+                ["SYP"] = new Currency("Syrian pound", "£"),
             },
             DialingCode = "+963",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Turks and Caicos Islands",
             CommonNativeName = "Turks and Caicos Islands",
@@ -4719,13 +4719,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1649",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Chad",
             CommonNativeName = "تشاد‎",
@@ -4741,13 +4741,13 @@ public static partial class ISO3166
                 ["ARA"] = "Arabic",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XAF"] = new CurrencyDescriptor("Central African CFA franc", "Fr"),
+                ["XAF"] = new Currency("Central African CFA franc", "Fr"),
             },
             DialingCode = "+235",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Togo",
             CommonNativeName = "Togo",
@@ -4762,13 +4762,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XOF"] = new CurrencyDescriptor("West African CFA franc", "Fr"),
+                ["XOF"] = new Currency("West African CFA franc", "Fr"),
             },
             DialingCode = "+228",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Thailand",
             CommonNativeName = "ประเทศไทย",
@@ -4783,13 +4783,13 @@ public static partial class ISO3166
             {
                 ["THA"] = "Thai",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["THB"] = new CurrencyDescriptor("Thai baht", "฿"),
+                ["THB"] = new Currency("Thai baht", "฿"),
             },
             DialingCode = "+66",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tajikistan",
             CommonNativeName = "Таджикистан",
@@ -4805,13 +4805,13 @@ public static partial class ISO3166
                 ["RUS"] = "Russian",
                 ["TGK"] = "Tajik",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TJS"] = new CurrencyDescriptor("Tajikistani somoni", "ЅМ"),
+                ["TJS"] = new Currency("Tajikistani somoni", "ЅМ"),
             },
             DialingCode = "+992",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tokelau",
             CommonNativeName = "Tokelau",
@@ -4828,13 +4828,13 @@ public static partial class ISO3166
                 ["SMO"] = "Samoan",
                 ["TKL"] = "Tokelauan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["NZD"] = new CurrencyDescriptor("New Zealand dollar", "$"),
+                ["NZD"] = new Currency("New Zealand dollar", "$"),
             },
             DialingCode = "+690",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Turkmenistan",
             CommonNativeName = "Туркмения",
@@ -4850,13 +4850,13 @@ public static partial class ISO3166
                 ["RUS"] = "Russian",
                 ["TUK"] = "Turkmen",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TMT"] = new CurrencyDescriptor("Turkmenistan manat", "m"),
+                ["TMT"] = new Currency("Turkmenistan manat", "m"),
             },
             DialingCode = "+993",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Timor-Leste",
             CommonNativeName = "Timor-Leste",
@@ -4872,13 +4872,13 @@ public static partial class ISO3166
                 ["POR"] = "Portuguese",
                 ["TET"] = "Tetum",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+670",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tonga",
             CommonNativeName = "Tonga",
@@ -4894,13 +4894,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["TON"] = "Tongan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TOP"] = new CurrencyDescriptor("Tongan paʻanga", "T$"),
+                ["TOP"] = new Currency("Tongan paʻanga", "T$"),
             },
             DialingCode = "+676",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Trinidad and Tobago",
             CommonNativeName = "Trinidad and Tobago",
@@ -4915,13 +4915,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TTD"] = new CurrencyDescriptor("Trinidad and Tobago dollar", "$"),
+                ["TTD"] = new Currency("Trinidad and Tobago dollar", "$"),
             },
             DialingCode = "+1868",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tunisia",
             CommonNativeName = "تونس",
@@ -4936,13 +4936,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TND"] = new CurrencyDescriptor("Tunisian dinar", "د.ت"),
+                ["TND"] = new Currency("Tunisian dinar", "د.ت"),
             },
             DialingCode = "+216",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Turkey",
             CommonNativeName = "Türkiye",
@@ -4957,13 +4957,13 @@ public static partial class ISO3166
             {
                 ["TUR"] = "Turkish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TRY"] = new CurrencyDescriptor("Turkish lira", "₺"),
+                ["TRY"] = new Currency("Turkish lira", "₺"),
             },
             DialingCode = "+90",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tuvalu",
             CommonNativeName = "Tuvalu",
@@ -4979,14 +4979,14 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["TVL"] = "Tuvaluan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["AUD"] = new CurrencyDescriptor("Australian dollar", "$"),
-                ["TVD"] = new CurrencyDescriptor("Tuvaluan dollar", "$"),
+                ["AUD"] = new Currency("Australian dollar", "$"),
+                ["TVD"] = new Currency("Tuvaluan dollar", "$"),
             },
             DialingCode = "+688",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Taiwan",
             CommonNativeName = "台灣",
@@ -5001,13 +5001,13 @@ public static partial class ISO3166
             {
                 ["ZHO"] = "Chinese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TWD"] = new CurrencyDescriptor("New Taiwan dollar", "$"),
+                ["TWD"] = new Currency("New Taiwan dollar", "$"),
             },
             DialingCode = "+886",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Tanzania",
             CommonNativeName = "Tanzania",
@@ -5023,13 +5023,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SWA"] = "Swahili",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["TZS"] = new CurrencyDescriptor("Tanzanian shilling", "Sh"),
+                ["TZS"] = new Currency("Tanzanian shilling", "Sh"),
             },
             DialingCode = "+255",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Uganda",
             CommonNativeName = "Uganda",
@@ -5045,13 +5045,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SWA"] = "Swahili",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["UGX"] = new CurrencyDescriptor("Ugandan shilling", "Sh"),
+                ["UGX"] = new Currency("Ugandan shilling", "Sh"),
             },
             DialingCode = "+256",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Ukraine",
             CommonNativeName = "Україна",
@@ -5066,13 +5066,13 @@ public static partial class ISO3166
             {
                 ["UKR"] = "Ukrainian",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["UAH"] = new CurrencyDescriptor("Ukrainian hryvnia", "₴"),
+                ["UAH"] = new Currency("Ukrainian hryvnia", "₴"),
             },
             DialingCode = "+380",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "United States Minor Outlying Islands",
             CommonNativeName = "United States Minor Outlying Islands",
@@ -5087,13 +5087,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+268",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Uruguay",
             CommonNativeName = "Uruguay",
@@ -5108,13 +5108,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["UYU"] = new CurrencyDescriptor("Uruguayan peso", "$"),
+                ["UYU"] = new Currency("Uruguayan peso", "$"),
             },
             DialingCode = "+598",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "United States",
             CommonNativeName = "United States",
@@ -5129,13 +5129,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Uzbekistan",
             CommonNativeName = "Узбекистан",
@@ -5151,13 +5151,13 @@ public static partial class ISO3166
                 ["RUS"] = "Russian",
                 ["UZB"] = "Uzbek",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["UZS"] = new CurrencyDescriptor("Uzbekistani soʻm", "so'm"),
+                ["UZS"] = new Currency("Uzbekistani soʻm", "so'm"),
             },
             DialingCode = "+998",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Vatican City",
             CommonNativeName = "Vaticano",
@@ -5173,13 +5173,13 @@ public static partial class ISO3166
                 ["ITA"] = "Italian",
                 ["LAT"] = "Latin",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["EUR"] = new CurrencyDescriptor("Euro", "€"),
+                ["EUR"] = new Currency("Euro", "€"),
             },
             DialingCode = "+3",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Saint Vincent and the Grenadines",
             CommonNativeName = "Saint Vincent and the Grenadines",
@@ -5194,13 +5194,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XCD"] = new CurrencyDescriptor("Eastern Caribbean dollar", "$"),
+                ["XCD"] = new Currency("Eastern Caribbean dollar", "$"),
             },
             DialingCode = "+1784",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Venezuela",
             CommonNativeName = "Venezuela",
@@ -5215,13 +5215,13 @@ public static partial class ISO3166
             {
                 ["SPA"] = "Spanish",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["VES"] = new CurrencyDescriptor("Venezuelan bolívar soberano", "Bs.S."),
+                ["VES"] = new Currency("Venezuelan bolívar soberano", "Bs.S."),
             },
             DialingCode = "+58",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "British Virgin Islands",
             CommonNativeName = "British Virgin Islands",
@@ -5236,13 +5236,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1284",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "United States Virgin Islands",
             CommonNativeName = "United States Virgin Islands",
@@ -5257,13 +5257,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["USD"] = new CurrencyDescriptor("United States dollar", "$"),
+                ["USD"] = new Currency("United States dollar", "$"),
             },
             DialingCode = "+1340",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Vietnam",
             CommonNativeName = "Việt Nam",
@@ -5278,13 +5278,13 @@ public static partial class ISO3166
             {
                 ["VIE"] = "Vietnamese",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["VND"] = new CurrencyDescriptor("Vietnamese đồng", "₫"),
+                ["VND"] = new Currency("Vietnamese đồng", "₫"),
             },
             DialingCode = "+84",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Vanuatu",
             CommonNativeName = "Vanuatu",
@@ -5301,13 +5301,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["VUV"] = new CurrencyDescriptor("Vanuatu vatu", "Vt"),
+                ["VUV"] = new Currency("Vanuatu vatu", "Vt"),
             },
             DialingCode = "+678",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Wallis and Futuna",
             CommonNativeName = "Wallis et Futuna",
@@ -5322,13 +5322,13 @@ public static partial class ISO3166
             {
                 ["FRA"] = "French",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["XPF"] = new CurrencyDescriptor("CFP franc", "₣"),
+                ["XPF"] = new Currency("CFP franc", "₣"),
             },
             DialingCode = "+681",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Samoa",
             CommonNativeName = "Samoa",
@@ -5344,13 +5344,13 @@ public static partial class ISO3166
                 ["ENG"] = "English",
                 ["SMO"] = "Samoan",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["WST"] = new CurrencyDescriptor("Samoan tālā", "T"),
+                ["WST"] = new Currency("Samoan tālā", "T"),
             },
             DialingCode = "+685",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Yemen",
             CommonNativeName = "اليَمَن",
@@ -5365,13 +5365,13 @@ public static partial class ISO3166
             {
                 ["ARA"] = "Arabic",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["YER"] = new CurrencyDescriptor("Yemeni rial", "﷼"),
+                ["YER"] = new Currency("Yemeni rial", "﷼"),
             },
             DialingCode = "+967",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "South Africa",
             CommonNativeName = "South Africa",
@@ -5396,13 +5396,13 @@ public static partial class ISO3166
                 ["XHO"] = "Xhosa",
                 ["ZUL"] = "Zulu",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ZAR"] = new CurrencyDescriptor("South African rand", "R"),
+                ["ZAR"] = new Currency("South African rand", "R"),
             },
             DialingCode = "+27",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Zambia",
             CommonNativeName = "Zambia",
@@ -5417,13 +5417,13 @@ public static partial class ISO3166
             {
                 ["ENG"] = "English",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ZMW"] = new CurrencyDescriptor("Zambian kwacha", "ZK"),
+                ["ZMW"] = new Currency("Zambian kwacha", "ZK"),
             },
             DialingCode = "+260",
         },
-        new Country
+        new CountryInfo
         {
             CommonName = "Zimbabwe",
             CommonNativeName = "Zimbabwe",
@@ -5452,9 +5452,9 @@ public static partial class ISO3166
                 ["XHO"] = "Xhosa",
                 ["ZIB"] = "Zimbabwean Sign Language",
             },
-            Currencies = new Dictionary<string, CurrencyDescriptor>
+            Currencies = new Dictionary<string, Currency>
             {
-                ["ZWL"] = new CurrencyDescriptor("Zimbabwean dollar", "$"),
+                ["ZWL"] = new Currency("Zimbabwean dollar", "$"),
             },
             DialingCode = "+263",
         },
@@ -5474,8 +5474,8 @@ public static partial class ISO3166
     /// Retrieves a country based on its numeric code.
     /// </summary>
     /// <param name="code">The three-digit ISO 3166-1 numeric country code.</param>
-    /// <returns>A <see cref="Country"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static Country? GetByNumericCode(int code)
+    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
+    public static CountryInfo? GetByNumericCode(int code)
     {
         return Countries.FirstOrDefault(c => c.NumericCode.Equals(code.ToString().PadLeft(3, '0'), StringComparison.OrdinalIgnoreCase));
     }
@@ -5484,8 +5484,8 @@ public static partial class ISO3166
     /// Retrieves a country based on its two-letter code.
     /// </summary>
     /// <param name="code">The two-letter ISO 3166-1 alpha-2 country code.</param>
-    /// <returns>A <see cref="Country"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static Country? GetByTwoLetterCode(string code)
+    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
+    public static CountryInfo? GetByTwoLetterCode(string code)
     {
         return Countries.FirstOrDefault(c => c.TwoLetterCode.Equals(code, StringComparison.OrdinalIgnoreCase));
     }
@@ -5494,8 +5494,8 @@ public static partial class ISO3166
     /// Retrieves a country based on its three-letter code.
     /// </summary>
     /// <param name="code">The three-letter ISO 3166-1 alpha-3 country code.</param>
-    /// <returns>A <see cref="Country"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static Country? GetByThreeLetterCode(string code)
+    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
+    public static CountryInfo? GetByThreeLetterCode(string code)
     {
         return Countries.FirstOrDefault(c => c.ThreeLetterCode.Equals(code, StringComparison.OrdinalIgnoreCase));
     }
@@ -5504,10 +5504,10 @@ public static partial class ISO3166
     /// Retrieves a read-only collection of countries that belong to the specified region.
     /// </summary>
     /// <param name="region">The region to filter countries by (e.g., "Europe", "Asia").</param>
-    /// <returns>A read-only collection of <see cref="Country"/> objects that are located in the specified region.
+    /// <returns>A read-only collection of <see cref="CountryInfo"/> objects that are located in the specified region.
     /// If no countries are found for the given region, an empty collection is returned.</returns>
-    public static IReadOnlyCollection<Country> GetByRegion(string region)
+    public static IReadOnlyCollection<CountryInfo> GetByRegion(string region)
     {
-        return new ReadOnlyCollection<Country>(Countries.Where(c => c.Region.Equals(region, StringComparison.OrdinalIgnoreCase)).ToArray());
+        return new ReadOnlyCollection<CountryInfo>(Countries.Where(c => c.Region.Equals(region, StringComparison.OrdinalIgnoreCase)).ToArray());
     }
 }

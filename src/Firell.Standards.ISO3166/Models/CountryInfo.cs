@@ -7,7 +7,7 @@ namespace Firell.Standards;
 /// <summary>
 /// Represents a country with its associated names and ISO 3166-1 codes.
 /// </summary>
-public record Country
+public record CountryInfo
 {
     /// <summary>
     /// Gets the common name of the country.
@@ -57,12 +57,12 @@ public record Country
     /// <summary>
     /// Gets the languages spoken in the country, represented as a dictionary where the key is the language code and the value is the language name.
     /// </summary>
-    public required Dictionary<string, string> Languages { get; init; }
+    public Dictionary<string, string> Languages { get; init; } = new Dictionary<string, string>();
 
     /// <summary>
-    /// Gets the currencies used in the country, represented as a dictionary where the key is the currency code and the value is a <see cref="CurrencyDescriptor"/> object containing the currency's name and symbol.
+    /// Gets the currencies used in the country, represented as a dictionary where the key is the currency code and the value is a <see cref="Currency"/> object containing the currency's name and symbol.
     /// </summary>
-    public required Dictionary<string, CurrencyDescriptor> Currencies { get; init; }
+    public Dictionary<string, Currency> Currencies { get; init; } = new Dictionary<string, Currency>();
 
     /// <summary>
     /// Gets the international dialing code of the country.
@@ -88,12 +88,12 @@ public record Country
 
         foreach (KeyValuePair<string, string> language in Languages)
         {
-            builder.AppendLine($"Language: {language.Key} - {language.Value}");
+            builder.AppendLine($"Language: {language.Value} ({language.Key})");
         }
 
-        foreach (KeyValuePair<string, CurrencyDescriptor> currency in Currencies)
+        foreach (KeyValuePair<string, Currency> currency in Currencies)
         {
-            builder.AppendLine($"Currency: {currency.Key} - {currency}");
+            builder.AppendLine($"Currency: {currency.Value.Name} ({currency.Key}, {currency.Value.Symbol})");
         }
 
         builder.AppendLine($"Dialing Code: {DialingCode}");
