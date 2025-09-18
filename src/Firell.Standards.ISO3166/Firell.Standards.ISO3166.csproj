@@ -1,7 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFrameworks>net9.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
+
+	<PropertyGroup Label="PackageInfo">
+		<PackageId>Firell.Standards.ISO3166</PackageId>
+		<PackageTags>ISO3166, Countries, Regions, Capitals, Languages, Currencies, Country-Codes, Dialing-Codes</PackageTags>
+		<PackageVersion>1.0.0</PackageVersion>
+
+		<Title>Firell Standards ISO3166</Title>
+		<Description>Provides ISO 3166 country codes (numeric, alpha-2, alpha-3) with country names, regions, capitals, languages, currencies, and international dialing codes for use in global and localization scenarios.</Description>
+
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\docs\ISO3166-README.md" Link="README.md" Pack="true" PackagePath="README.md"/>
+	</ItemGroup>
 </Project>

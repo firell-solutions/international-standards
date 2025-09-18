@@ -1,0 +1,19 @@
+<Project>
+	<PropertyGroup Label="PackageInfo" Condition="'$(PackageId)' != ''">
+		<Product>Firell Standards</Product>
+
+		<Company>Firell</Company>
+		<Authors>Patrick Frost Sørensen</Authors>
+		<Copyright>Copyright © $([System.DateTime]::Now.ToString('yyyy')) Firell</Copyright>
+
+		<RepositoryUrl>https://github.com/firell-solutions/international-standards</RepositoryUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+		<PackageIcon>package-icon.png</PackageIcon>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup Label="PackageResources" Condition="'$(PackageId)' != ''">
+		<None Include="..\..\docs\icon.png" Link="package-icon.png" Pack="true" PackagePath="package-icon.png"/>
+	</ItemGroup>
+</Project>
