@@ -11,7 +11,8 @@ namespace Firell.Standards;
 /// Provides a collection of ISO 3166 country data and utility methods for retrieving country information based on various criteria.
 /// </summary>
 /// <remarks>
-/// The <see cref="ISO3166"/> class contains a predefined collection of countries adhering to the ISO 3166-1 standard. It provides methods to retrieve country information by numeric, two-letter, or three-letter codes, as well as by region.</remarks>
+/// The <see cref="ISO3166"/> class contains a predefined collection of countries adhering to the ISO 3166-1 standard. It provides methods to retrieve country information by numeric, two-letter, or three-letter codes, as well as by region.
+/// </remarks>
 public static partial class ISO3166
 {
     /// <summary>
