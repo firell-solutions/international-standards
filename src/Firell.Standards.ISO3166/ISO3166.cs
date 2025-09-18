@@ -3,13 +3,9 @@
 //     Any manual changes may cause errors and will be overwritten when regenerated.
 // </auto-generated>
 
-using System.Collections.ObjectModel;
-
 #pragma warning disable IDE0130
 namespace Firell.Standards;
 #pragma warning restore IDE0130
-
-#nullable enable
 
 /// <summary>
 /// Provides a collection of ISO 3166 country data and utility methods for retrieving country information based on various criteria.
@@ -318,45 +314,4 @@ public static partial class ISO3166
         Subregion.WesternAsia,
         Subregion.WesternEurope,
     };
-
-    /// <summary>
-    /// Retrieves a country based on its numeric code.
-    /// </summary>
-    /// <param name="code">The three-digit ISO 3166-1 numeric country code.</param>
-    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static CountryInfo? GetByNumericCode(int code)
-    {
-        return Countries.FirstOrDefault(c => c.NumericCode.Equals(code.ToString().PadLeft(3, '0'), StringComparison.OrdinalIgnoreCase));
-    }
-
-    /// <summary>
-    /// Retrieves a country based on its two-letter code.
-    /// </summary>
-    /// <param name="code">The two-letter ISO 3166-1 alpha-2 country code.</param>
-    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static CountryInfo? GetByTwoLetterCode(string code)
-    {
-        return Countries.FirstOrDefault(c => c.TwoLetterCode.Equals(code, StringComparison.OrdinalIgnoreCase));
-    }
-
-    /// <summary>
-    /// Retrieves a country based on its three-letter code.
-    /// </summary>
-    /// <param name="code">The three-letter ISO 3166-1 alpha-3 country code.</param>
-    /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
-    public static CountryInfo? GetByThreeLetterCode(string code)
-    {
-        return Countries.FirstOrDefault(c => c.ThreeLetterCode.Equals(code, StringComparison.OrdinalIgnoreCase));
-    }
-
-    /// <summary>
-    /// Retrieves a read-only collection of countries that belong to the specified region.
-    /// </summary>
-    /// <param name="region">The region to filter countries by (e.g., "Europe", "Asia").</param>
-    /// <returns>A read-only collection of <see cref="CountryInfo"/> objects that are located in the specified region.
-    /// If no countries are found for the given region, an empty collection is returned.</returns>
-    public static IReadOnlyCollection<CountryInfo> GetByRegion(string region)
-    {
-        return new ReadOnlyCollection<CountryInfo>(Countries.Where(c => c.Region.Equals(region, StringComparison.OrdinalIgnoreCase)).ToArray());
-    }
 }
