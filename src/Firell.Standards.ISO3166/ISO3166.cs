@@ -275,15 +275,49 @@ public static partial class ISO3166
         CountryInfo.Zimbabwe,
     };
 
-    public static IReadOnlyCollection<string> Regions { get; } = new ReadOnlyCollection<string>
-    ([
-        "Africa",
-        "Americas",
-        "Antarctic",
-        "Asia",
-        "Europe",
-        "Oceania",
-    ]);
+    /// <summary>
+    /// Gets a read-only list of all defined regions.
+    /// </summary>
+    public static IReadOnlyList<string> Regions { get; } = new string[]
+    {
+        Region.Africa,
+        Region.Americas,
+        Region.Antarctic,
+        Region.Asia,
+        Region.Europe,
+        Region.Oceania,
+    };
+
+    /// <summary>
+    /// Gets a read-only list of all defined subregions.
+    /// </summary>
+    public static IReadOnlyList<string> Subregions { get; } = new string[]
+    {
+        Subregion.AustraliaAndNewZealand,
+        Subregion.Caribbean,
+        Subregion.CentralAmerica,
+        Subregion.CentralAsia,
+        Subregion.CentralEurope,
+        Subregion.EasternAfrica,
+        Subregion.EasternAsia,
+        Subregion.EasternEurope,
+        Subregion.Melanesia,
+        Subregion.Micronesia,
+        Subregion.MiddleAfrica,
+        Subregion.NorthAmerica,
+        Subregion.NorthernAfrica,
+        Subregion.NorthernEurope,
+        Subregion.Polynesia,
+        Subregion.SouthAmerica,
+        Subregion.SouthEasternAsia,
+        Subregion.SoutheastEurope,
+        Subregion.SouthernAfrica,
+        Subregion.SouthernAsia,
+        Subregion.SouthernEurope,
+        Subregion.WesternAfrica,
+        Subregion.WesternAsia,
+        Subregion.WesternEurope,
+    };
 
     /// <summary>
     /// Retrieves a country based on its numeric code.
