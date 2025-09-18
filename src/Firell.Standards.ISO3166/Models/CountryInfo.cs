@@ -50,7 +50,7 @@ public partial record CountryInfo
     public required string Region { get; init; }
 
     /// <summary>
-    /// Gets the subregion of the region where the country is located.
+    /// Gets the subregion where the country is located within its region.
     /// </summary>
     public required string Subregion { get; init; }
 
