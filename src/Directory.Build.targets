@@ -3,8 +3,8 @@
 		<Product>Firell Standards</Product>
 
 		<Company>Firell</Company>
-		<Authors>Patrick Frost Sørensen</Authors>
-		<Copyright>Copyright © $([System.DateTime]::Now.ToString('yyyy')) Firell</Copyright>
+		<Authors>Patrick Frost Sørensen, Firell Solutions</Authors>
+		<Copyright>Copyright © $([System.DateTime]::Now.ToString('yyyy')) Firell Solutions</Copyright>
 
 		<RepositoryUrl>https://github.com/firell-solutions/international-standards</RepositoryUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
