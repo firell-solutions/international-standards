@@ -3,8 +3,7 @@ This package includes international standard country codes, along with related i
 
 ## Features
 - Country codes (numeric, alpha-2, alpha-3)
-- Common and native country names
-- Official country names
+- Common, official and native country names
 - Regions and capital cities
 - Spoken languages and active currencies
 - International dialing codes
