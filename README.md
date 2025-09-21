@@ -2,6 +2,7 @@
 Working with international standards data can be tricky. It is often hard to find and even harder to keep up to date across multiple projects. This library gives .NET developers a straightforward alternative to building or collecting their own data. Its simple interface lets you access a wide range of information with minimal code.
 
 The library is broken into smaller NuGet packages so you can pick only the standards you need, keeping your projects lean and clutter-free. If you want everything, the main package bundles all sub-packages for convenience.
+- [Firell.Standards.ISO3166](https://www.nuget.org/packages/Firell.Standards.ISO3166)
 
 ## ISO 3166
 This package includes international standard country codes, along with related information that may be useful in different contexts.
