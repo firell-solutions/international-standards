@@ -11,7 +11,7 @@ This package includes international standard currency codes, along with related 
 
 ## Usage
 
-### Get countries & regions
+### Get currencies & commodities
 Access the different lists of currencies using predefined properties in the `ISO4217` class.
 ```csharp
 var currencies = ISO4217.Currencies;
