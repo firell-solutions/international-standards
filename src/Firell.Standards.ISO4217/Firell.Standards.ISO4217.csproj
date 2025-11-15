@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Label="PackageInfo">
+		<PackageId>Firell.Standards.ISO4217</PackageId>
+		<PackageTags>ISO4217, Currencies, Commodities, Countries, Symbols, Currency-Codes</PackageTags>
+		<PackageVersion>1.0.0</PackageVersion>
+
+		<Title>Firell Standards ISO4217</Title>
+		<Description>Provides ISO 4217 currency codes (numeric, alphabetic) with currency names, symbols, countries, and minor units for use in global and localization scenarios.</Description>
+
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\docs\ISO4217-README.md" Link="README.md" Pack="true" PackagePath="README.md" />
+	</ItemGroup>
+</Project>
