@@ -5,17 +5,17 @@ namespace Firell.Standards;
 #pragma warning restore IDE0130
 
 /// <summary>
-/// Represents a country with its associated names and ISO 3166-1 codes.
+/// Represents information about a country, including its names, codes, region, capital, languages, currencies, and dialing code.
 /// </summary>
 public partial record CountryInfo
 {
     /// <summary>
-    /// Gets the common name of the country.
+    /// Gets the common name associated of the country.
     /// </summary>
     public required string CommonName { get; init; }
 
     /// <summary>
-    /// Gets the common native name of the country.
+    /// Gets the common native or local name of the country.
     /// </summary>
     public required string CommonNativeName { get; init; }
 
@@ -25,7 +25,7 @@ public partial record CountryInfo
     public required string OfficialName { get; init; }
 
     /// <summary>
-    /// Gets the official native name of the country.
+    /// Gets the official native or local name of the country.
     /// </summary>
     public required string OfficialNativeName { get; init; }
 
@@ -50,7 +50,7 @@ public partial record CountryInfo
     public required string Region { get; init; }
 
     /// <summary>
-    /// Gets the subregion where the country is located within its region.
+    /// Gets the subregion within the region where the country is located.
     /// </summary>
     public required string Subregion { get; init; }
 
@@ -65,9 +65,9 @@ public partial record CountryInfo
     public Dictionary<string, string> Languages { get; init; } = new Dictionary<string, string>();
 
     /// <summary>
-    /// Gets the currencies used in the country, represented as a dictionary where the key is the currency code and the value is a <see cref="Currency"/> object containing the currency's name and symbol.
+    /// Gets the currencies used in the country, represented as a dictionary where the key is the currency code and the value is the currency name.
     /// </summary>
-    public Dictionary<string, Currency> Currencies { get; init; } = new Dictionary<string, Currency>();
+    public Dictionary<string, string> Currencies { get; init; } = new Dictionary<string, string>();
 
     /// <summary>
     /// Gets the international dialing code of the country.
@@ -92,14 +92,16 @@ public partial record CountryInfo
         builder.AppendLine($"Subregion: {Subregion}");
         builder.AppendLine($"Capital: {Capital}");
 
-        foreach (KeyValuePair<string, string> language in Languages)
+        if (Languages.Count> 0)
         {
-            builder.AppendLine($"Language: {language.Value} ({language.Key})");
+            IEnumerable<string> languages = Languages.Select(x => $"{x.Value} ({x.Key})");
+            builder.AppendLine($"Languages: {string.Join(", ", languages)}");
         }
 
-        foreach (KeyValuePair<string, Currency> currency in Currencies)
+        if (Currencies.Count > 0)
         {
-            builder.AppendLine($"Currency: {currency.Value.Name} ({currency.Key}, {currency.Value.Symbol})");
+            IEnumerable<string> currencies = Currencies.Select(x => $"{x.Value} ({x.Key})");
+            builder.AppendLine($"Currencies: {string.Join(", ", currencies)}");
         }
 
         builder.AppendLine($"Dialing Code: {DialingCode}");

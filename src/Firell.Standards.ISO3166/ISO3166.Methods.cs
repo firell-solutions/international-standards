@@ -10,7 +10,7 @@ public static partial class ISO3166
     /// Lookup dictionary for countries by their numeric code.
     /// </summary>
     private static readonly Dictionary<string, CountryInfo> _numericCodeLookup = new Dictionary<string, CountryInfo>(Countries.Count, StringComparer.OrdinalIgnoreCase);
-
+  
     /// <summary>
     /// Lookup dictionary for countries by their two-letter code.
     /// </summary>
@@ -35,7 +35,7 @@ public static partial class ISO3166
     }
 
     /// <summary>
-    /// Retrieves a country based on its code, which can be its numeric code (3 digits), a two-letter ISO 3166-1 alpha-2 code, or a three-letter ISO 3166-1 alpha-3 code.
+    /// Retrieves a country based on its code, which can be a three-digit numeric code or a two- or three-letter alphabetic code.
     /// </summary>
     /// <param name="code">The country code to look up.</param>
     /// <returns>A <see cref="CountryInfo"/> object if a matching country is found; otherwise, <see langword="null"/>.</returns>
@@ -68,7 +68,7 @@ public static partial class ISO3166
     }
 
     /// <summary>
-    /// Attempts to retrieve a country based on its code, which can be its numeric code (3 digits), a two-letter ISO 3166-1 alpha-2 code, or a three-letter ISO 3166-1 alpha-3 code.
+    /// Attempts to retrieve a country based on its code, which can be a three-digit numeric code or a two- or three-letter alphabetic code.
     /// </summary>
     /// <param name="code">The country code to look up.</param>
     /// <param name="country">When this method returns, contains the <see cref="CountryInfo"/> object associated with the specified code, if the lookup succeeds; otherwise, <see langword="null"/>.</param>

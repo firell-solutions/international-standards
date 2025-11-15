@@ -3,6 +3,7 @@ Working with international standards data can be tricky. It is often hard to fin
 
 The library is broken into smaller NuGet packages so you can pick only the standards you need, keeping your projects lean and clutter-free. If you want everything, the main package bundles all sub-packages for convenience.
 - [Firell.Standards.ISO3166](https://www.nuget.org/packages/Firell.Standards.ISO3166)
+- [Firell.Standards.ISO4217](https://www.nuget.org/packages/Firell.Standards.ISO4217)
 
 ## ISO 3166
 This package includes international standard country codes, along with related information that may be useful in different contexts.
@@ -48,14 +49,8 @@ public record CountryInfo
     public string Subregion { get; init; }
     public string Capital { get; init; }
     public Dictionary<string, string> Languages { get; init; }
-    public Dictionary<string, Currency> Currencies { get; init; }
+    public Dictionary<string, string> Currencies { get; init; }
     public string DialingCode { get; init; }
-}
-
-public record Currency
-{
-    public string Name { get; init; }
-    public string Symbol { get; init; }
 }
 ```
 Each model includes a custom string representation for easy printing and debugging:
@@ -70,15 +65,15 @@ Three Letter Code: DNK
 Region: Europe
 Subregion: Northern Europe
 Capital: Copenhagen
-Language: Danish (DAN)
-Currency: Danish krone (DKK, kr)
+Languages: Danish (DAN)
+Currencies: Danish krone (DKK)
 Dialing Code: +45
 ```
 
-# ISO 4217
+## ISO 4217
 This package includes international standard currency codes, along with related information that may be useful in different contexts.
 
-## Features
+### Features
 - Currency codes (numeric, alphabetic)
 - Official, native, and common currency names
 - Currency symbols
@@ -86,9 +81,9 @@ This package includes international standard currency codes, along with related 
 - Country associations
 - Commodities and specialized currencies
 
-## Usage
+### Usage
 
-### Get currencies & commodities
+#### Get currencies & commodities
 Access the different lists of currencies using predefined properties in the `ISO4217` class.
 ```csharp
 var currencies = ISO4217.Currencies;
@@ -103,7 +98,7 @@ var danishKrone = ISO4217.GetCurrencyByCode("DKK");
 var unitedStatesDollar = ISO4217.GetCurrencyByCode("840");
 ```
 
-## Models
+### Models
 ```cs
 public partial record CurrencyInfo
 {

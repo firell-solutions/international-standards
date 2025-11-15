@@ -42,14 +42,8 @@ public record CountryInfo
     public string Subregion { get; init; }
     public string Capital { get; init; }
     public Dictionary<string, string> Languages { get; init; }
-    public Dictionary<string, Currency> Currencies { get; init; }
+    public Dictionary<string, string> Currencies { get; init; }
     public string DialingCode { get; init; }
-}
-
-public record Currency
-{
-    public string Name { get; init; }
-    public string Symbol { get; init; }
 }
 ```
 Each model includes a custom string representation for easy printing and debugging:
@@ -64,7 +58,7 @@ Three Letter Code: DNK
 Region: Europe
 Subregion: Northern Europe
 Capital: Copenhagen
-Language: Danish (DAN)
-Currency: Danish krone (DKK, kr)
+Languages: Danish (DAN)
+Currencies: Danish krone (DKK)
 Dialing Code: +45
 ```
