@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Label="PackageInfo">
+		<PackageId>Firell.Standards</PackageId>
+		<PackageTags>ISO3166, ISO4217, country-codes, currency-codes, international-standards</PackageTags>
+		<PackageVersion>1.0.0</PackageVersion>
+
+		<Title>Firell Standards</Title>
+		<Description>Meta-package that combines the multiple Firell Standards libraries into one package for convenience.</Description>
+
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Link="README.md" Pack="true" PackagePath="README.md"/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Firell.Standards.ISO3166\Firell.Standards.ISO3166.csproj" />
+		<ProjectReference Include="..\Firell.Standards.ISO4217\Firell.Standards.ISO4217.csproj" />
+	</ItemGroup>
+</Project>
