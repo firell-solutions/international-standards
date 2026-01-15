@@ -8,7 +8,7 @@
 	<PropertyGroup Label="PackageInfo">
 		<PackageId>Firell.Standards.ISO4217</PackageId>
 		<PackageTags>ISO4217, Currencies, Commodities, Countries, Symbols, Currency-Codes</PackageTags>
-		<PackageVersion>1.0.0</PackageVersion>
+		<PackageVersion>1.1.0</PackageVersion>
 
 		<Title>Firell Standards ISO4217</Title>
 		<Description>Provides ISO 4217 currency codes (numeric, alphabetic) with currency names, symbols, countries, and minor units for use in global and localization scenarios.</Description>
